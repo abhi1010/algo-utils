@@ -2,7 +2,7 @@
 
 from trading.common import utils
 
-logger = utils.get_logger('dual-momentum', use_rich=True, should_add_ts=True)
+logger = utils.get_logger('triple-momentum', use_rich=True, should_add_ts=True)
 
 import os, sys, json, argparse
 import subprocess
@@ -43,7 +43,7 @@ python trading/strategies/triple_momentum.py \
 def parse_arguments() -> argparse.Namespace:
   """Parse command line arguments."""
   parser = argparse.ArgumentParser(
-      description='Dual Momentum Trading Strategy')
+      description='Triple Momentum Trading Strategy')
 
   # what is the main ticker
 
@@ -86,7 +86,7 @@ def parse_arguments() -> argparse.Namespace:
   parser.add_argument('--output-dir',
                       type=str,
                       required=False,
-                      default='data/dual-momentum',
+                      default='data/triple-momentum',
                       help='Directory to store output data')
 
   # add an arg for notifications
